@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" type="image/icon" href="logo.ico"/>
+<title>Feedback</title>
+<style>
+body {
+  font: 16px verdana;
+  background: rgba(26, 188, 156,1.0);
+  background-image:url("dc1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+div{
+  border-radius:8px;
+  box-sizing: content-box;
+  width:55%;
+  margin-left: auto ;
+  margin-right: auto ;
+  padding: 50px 50px 50px 50px;
+  background-color:white;
+  opacity:0.7;
+  background-size: cover;
+  background-position: center center;
+}
+h3{
+    font-style: italic;
+}
+form{
+    font-style: oblique;
+}
+h1{
+	font-style:normal;
+}
+input[type=text] {
+    
+    width: 35%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+}
+
+input[type=text]:focus{
+    width: 70%;
+    background-color: lightblue;
+    border: 3px solid #555;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+textarea {
+    width: 40%;
+    height: 150px;
+    padding: 12px 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+textarea:focus{
+    width: 60%;
+    /*height: 200px;*/
+    background-color: lightblue;
+    border: 3px solid #555;
+    -webkit-transition: width 0.3s ease-in-out/*,height 0.3s ease-in-out*/;
+    transition: width 0.3s ease-in-out/*,height 0.3s ease-in-out*/;
+}
+input[type=submit], input[type=reset] {
+    background-color: #4CAF10;
+    border: none;
+    color: white;
+    padding: 10px 28px;
+    text-decoration: none;
+    margin: 4px 2px;
+    border-radius: 4px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    
+}
+input[type=submit]:hover,input[type=reset]:hover{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: #7CFC00;
+}
+.link a{
+	text-shadow: 0px 0px 10px white;
+	display:block;
+	font-size:25px;
+	color:black;
+	text-decoration:none;
+	-webkit-transition: all 0.3s ease-in-out;
+	padding: 5px 5px 5px 2px;
+}
+
+.link a:hover{ -webkit-transform:scale(1.2); -webkit-transform:translate(5px);  text-decoration:underline;}
+
+
+</style>
+</head>
+<body>
+<div>
+
+<form name="chat" action="feedback.php" id="feed" method="POST">
+ <p>
+<h1>Feedback 
+    <h3><br>DC Entertainment is listening and welcomes your feedback! Please fill out and submit this contact us form with your questions, concerns and comments.</br></h3>
+</h1>
+</p>
+Your name:* <br>
+<input type="text" name="realname" required><br>
+<br>
+
+Your email:* <br>
+<input type="text" name="email" required><br>
+<br>
+
+<span class="">Your comments or suggestions: </span><br>
+<textarea name="comments" rows="15" cols="50"></textarea><br><br>
+
+<input type="submit" value="Submit">
+<input type="reset" onreset="res()" value="Clear">
+</form>
+</div>
+<footer class='link'><a href="home.html">Back To Home </footer>
+<script>
+var s = document.getElementById("feed")
+s.onsubmit = sub;
+function sub()
+    {
+        var a = confirm("Would you like to Submit the form ?")
+        return a;
+    }
+
+function res()
+    {
+        var a = confirm("Would you like to Reset the form ?")
+        return a;
+    }
+</script>
+</body>
+</html>

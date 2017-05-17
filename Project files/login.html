@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+body {
+    background-image:url(loginback1.jpg);
+	background-size: 100% auto;
+	background-opacity:0.7;
+	background-position:center center;
+	background-repeat:no-repeat;
+  	-webkit-background-size: cover;
+  		margin-left: 10px; 
+	margin-right:10px;
+}
+.div2 {
+	padding-bottom: 20px; 
+}
+.div2 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;;
+    width: 100%;
+}
+
+.div2 li {
+	width:20%;
+    float: left; 
+    background: #ddd;      
+}
+
+.div2 li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #667;
+    padding: 5px 5px 5px 0px;
+    
+}
+
+.div2 li:last-child {
+    border-right: none;
+}
+
+.div2 li a:link{text-decoration:none; }
+.div2 li a:visited{text-decoration:underline;}
+.div2 li a:focus{font-style:italic;}
+
+.div2 li a.active{color:white;background-color:green;}
+
+.div2 li a:hover:not(.active){ background-color:#8dc1ff;}
+
+.div1{
+	box-shadow:2px 2px 10px black;
+	height:100%;
+	width:35%;
+	background-color:#F0FFF0;
+	border-radius: 20px;
+	margin-left: auto ;
+	opacity:1;
+    margin-right: auto ;
+    padding: 20px 20px 20px 20px;
+}
+@font-face {
+    font-family: "My Custom Font";
+    src: url(/home/dell/font/Niconne/Niconne-Regular.ttf) format("truetype");
+}
+.textcon{
+	margin-right: 30px ;	
+	margin-left:30px;
+}
+#heading{
+	color:#7cfc00;
+	font-size:60px;
+	font-weight:100;
+	text-shadow:1px 10px 30px white;
+	font-family:"My Custom Font";
+	text-align:center;
+}
+.info{
+	font-size: 20px;
+	font-weight:500;
+	text-shadow:3px 3px 15px white;
+	color:#dfe3ee;
+	text-align:center;
+	padding-bottom:30px;
+}
+
+
+#divheading{
+	
+	font-size:40px;
+	text-align:center;
+	color:#3b5998;
+	text-shadow:4px 5px 10px #3b5998;
+	padding-top:0px;
+	font-weight:100;
+}
+::-webkit-input-placeholder {
+   text-align: center;
+}
+<--hr{
+	margin: 20px 20px;
+	border-top:2px solid rgb(64,0,0) ;
+	border-bottom:2px solid rgb(64,0,00);
+	border-radius: 10px;
+	
+}-->
+
+input[type=text]{
+    width: 30%;
+    border:2px solid #696969;
+    -webkit-transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color:;
+    padding: 9px 35px; 
+    margin:20px 0px;    
+}
+input[type=password]{
+    width: 30%;
+    border:2px solid #696969;
+    -webkit-transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color:;
+    padding: 9px 35px; 
+    margin:20px 10px;    
+}
+<--#718ca1-->
+#reg_link{
+	font-size:20px;
+	
+}
+#reg_link:link{text-decoration:none; }
+#reg_link:visited{text-decoration:underline;}
+#reg_link:hover{text-decoration:underline;color:purple;background-color:lightgreen; transition: all 0.5s ease-in;}
+#reg_link:focus{font-style:italic;color:red;text-decoration:underline;}
+
+input[type=submit]{
+    background-color:green;
+    border:1px solid green;
+    padding: 10px 28px;
+    text-decoration: none;
+  	margin:5px 5px;
+    border-radius: 7px;
+    -webkit-transition: all 0.2s ease-in-out;
+    color:#ccffff;
+    font-size:15px;	
+    text-shadow:0px 0px 10px  #b3ffff;
+}
+
+input[type=submit]:hover{
+    -webkit-transform: scale(1.06);
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #40ff00;
+}
+
+hr{
+	margin: 20px 20px;
+	border-top:2px solid grey;
+	border-bottom:2px solid grey;
+}
+
+</style>
+</head>
+<body>
+
+<div class='div2'>
+<ul >
+  <li><a href="home.html"><img src='home.png' width='25px' height='25px'><br>Home</a></li>
+  <li><a href="about.html"><img src='about.png' width='25px' height='25px'><br>About</a></li>
+  <li><a href="contact.html"><img src='contact.png' width='25px' height='25px'><br>Contact</a></li>
+  <li><a class="active" href="login.html"><img src='register.jpg' width='25px' height='25px'><br>Login/Register</a></li>
+  <li><a href="feedback.html"><img src='feedback.png' width='25px' height='25px'><br>Feedback</a></li>
+
+</ul>
+</div>
+
+<p id="heading">DC Comics - User Login Page </p>
+<div class = "textcon">
+<h2 class="info">  If you are already a member of the DC community , then login to avail various features of the website such as the  Monthly DC Comics Quiz , subscription to the website so as to get the latest comics of your favourite characters and to take part in the ' Best-Written-Script ' compeititon  . If you aren't a member already , then please register to the website by clicking the link given below the Login button . </h2>
+<br><br>
+</div>
+<div class = "div1"> 
+<h2 id="divheading">	LOGIN	</h2>
+ <center>
+<form id="login_form" action="login.php" method="POST" >
+<hr>
+<br>
+	<div class="row">
+		<input id="username" name="username" type="text" size="30" onfocus="css(this)" onblur="rcs(this)" placeholder="Username" required/>
+		<br>
+		<input id="passwordbox" name="password" type="password" size="30" onfocus="css(this)" onblur="rcs(this)" placeholder="Password" required/>
+		<br />
+		<label><input id="check" name="show" type="checkbox" />Show Password</label>
+	</div>
+	<br><br>
+	<input id="submit_button" type="submit" value="LOGIN" />
+	<br><br>
+	<a id="reg_link" href="register.html" style="font-size:20px; color:grey;" > Not a member ? Register Now !!</a>
+</form>		
+ 
+ <br></center> 
+</div>
+<br><br>
+<hr><br>
+<script>
+function css(x){
+	x.style.backgroundColor="lightblue";
+ 	x.style.fontWieght="100";
+ 	x.style.color="black";
+}
+
+function rcs(x){
+	if(x.value==""){
+	x.style.backgroundColor="#ff4d4d";
+	x.style.fontWieght="100";
+	}
+	else{ 
+	x.style.backgroundColor="#a3de83";
+	
+	}
+}
+
+
+function show(){
+    var p = document.getElementById('passwordbox');
+    p.setAttribute('type', 'text');
+}
+function hide() {
+    var p = document.getElementById('passwordbox');
+    p.setAttribute('type', 'password');
+}
+var pw = 0;
+document.getElementById("check").addEventListener("click",passcheck,false)
+function passcheck(){
+    if (pw == 0) {
+        pw = 1;
+        show();
+    }else {
+        pw = 0;
+        hide();
+    }
+}
+
+</script>
+<footer style="font-size:16px; color:white; opacity:0.8;"> All Site Content &#169 Copyright 2016 A.A.A</footer>
+</body>
+</html>

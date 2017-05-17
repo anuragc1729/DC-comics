@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Subscribe</title>
+<style>
+*{
+	font-size: 15px;
+}
+#prefix{
+	font-size: 15px;
+	font-style:;
+
+}
+body{
+	background: -webkit-linear-gradient();	
+	background-image:url();
+	background-size: 100% auto;
+	background-position:center center;
+	background-repeat:no-repeat;
+  -webkit-background-size: cover;	
+}
+#info{
+			font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+}
+.div1{
+	
+	height:80%;
+	width:60%;
+	border-radius: 30px;
+	margin-left: auto ;
+    margin-right: auto ;
+    padding: 50px 50px 50px 50px;
+}
+.list li{
+	list-style-type: inline;;
+	display: inline;
+	padding: 10px;
+}
+#heading{
+font-size:50px;
+text-align:center;
+font-weight: 200;
+
+}
+.address ,.name , .num , .subs{
+	display: inline;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 20px;	
+}
+
+
+
+ input[type=text]{
+	margin: auto;
+	padding:8px;
+}
+input, select, textarea {
+	font-weight: 100;	
+	font-size   : 100%;
+	
+	margin: 0;
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+input[type=text] {
+  	
+    
+    border-radius: 4px;
+    font-size: 15px; 
+}
+
+input[type=text]:focus{
+    background-color: lightblue;
+    
+    -webkit-transition: width 0.4s ease-in-out;
+}
+
+textarea {
+    padding: 12px 20px;
+    font-size: 15px;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    
+}
+textarea:focus{
+
+    background-color: lightblue;
+    -webkit-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+}
+input[type=submit], input[type=reset] {
+    background-color:;
+    color: black;
+    padding: 10px 28px;
+    margin: 4px 2px;
+    border-radius: 4px;
+}
+input[type=submit]:hover,input[type=reset]:hover{
+
+    background-color:;
+}
+
+</style>
+
+</head>
+<body>
+<div class="div1">
+<center>
+<form name="chat" id="form" action="" onSubmit="" onreset="" method="POST">
+
+<h2 id="heading">Subscribe to DC Comics</h2>
+
+<h2 id="info"></h2>
+<br><br><br>
+<div class = "name">
+<select id="prefix" name="title">
+<option selected="selected"> Mr. </option>
+<option> Ms. </option>
+<option> Mrs. </option>
+<option> Dr. </option>
+</select>
+
+<label class="label"> First Name: <input type="text" name="fname" size="12" required/>
+<span class="aster">*</span>
+</label>
+<label class="label"> Last Name:  <input type="text" name="lname" size="20" required/>
+<span class="aster">*</span>
+</label>
+
+<br /><br /><br />
+
+<div class="address">
+
+<label class="label"> Address: <input type="text" name="addr" size="40" required/>
+<span class="aster">*</span>
+</label>
+<br />
+<br>
+<br>
+<label class="label">City: <input type="text" name="city" size="12" required/>
+<span class="aster">*</span>
+</label>
+
+
+
+<label class="label">State: <input type="text" name="state" size="13" value="Karnataka" required/>
+<span class="aster">*</span>
+</label>
+
+
+
+<label class="label">Pin:<input type="text" name="pin" size="10" required/>
+<span class="aster">*</span> 
+</label>
+<br>
+<br><br>
+</div>
+<div class="num">
+<label class="label">Mobile No. :<input type="text" name="mobile" size="10"/></label>
+
+<label class="label">Telephone No. :<input type="text" name="mobile" size="11"/></label>
+<br><br>
+</div>
+<br><br>
+<div class="subs">
+<label class="label">
+Subscribe for:
+<input type="radio" name="years" value="1" /> 1 year (Rs 599.00)
+<input type="radio" name="years" value="2" checked="checked" /> 2 years (Rs 999.00)
+</label>
+<br>
+
+<ul class="list">
+Your favourite Superhero: 
+<li><input type="checkbox" name="check1" value="Batman" /> Batman</li> 
+<li><input type="checkbox" name="check2" value="Superman" /> Superman</li> 
+<li><input type="checkbox" name="check3" value="Wonder Woman" /> Wonder Woman</li>
+</ul>
+</div>
+<br><br>
+<div class="textbox">
+<label class="label">Any Special Request(s): <br><br>
+<textarea id="box" name="special" rows="3" cols="30" wrap="yes">
+</textarea></label>
+</div>
+
+<br><br><br>
+<input type="submit" id="subbtn" value="SUBSCRIBE NOW!!" />
+<input type="reset" id="resbtn" value="Reset Details" />
+
+</form>
+
+<script>
+
+var f = document.getElementById("form");
+f.onsubmit=pgsub;
+function pgsub(){
+var a = confirm("Would you like to subscribe ?")
+return a ;
+}	
+
+
+
+</script>
+
+
+</div>
+</body>
+</html>

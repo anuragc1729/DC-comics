@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+body {
+    background-image:url(loginback1.jpg);
+    background-size: 100% auto;
+    background-opacity:0.7;
+    background-position:center center;
+    background-repeat:no-repeat;
+    -webkit-background-size: cover;
+        margin-left: 10px; 
+    margin-right:10px;
+}
+.div1{
+    box-shadow:2px 2px 10px black;
+    height:100%;
+    width:50%;
+    background-color:#F0FFF0;
+    border-radius: 20px;
+    margin-left: auto ;
+    opacity:1;
+    margin-right: auto ;
+    padding: 20px 20px 20px 20px;
+}
+.textcon{
+    margin-right: 30px ;    
+    margin-left:30px;
+}
+@font-face {
+    font-family: "My Custom Font";
+    src: url(/home/dell/font/Kaushan_Script/KaushanScript-Regular.ttf) format("truetype");
+}
+
+#heading{
+    color:#7cfc00;
+    font-size:60px;
+    font-weight:100;
+    text-shadow:1px 10px 30px white;
+    font-family:"My Custom Font";
+    text-align:center;
+}
+.info{
+    font-size: 20px;
+    font-weight:500;
+    text-shadow:3px 3px 15px white;
+    color:#dfe3ee;
+    text-align:center;
+    padding-bottom:30px;
+}
+
+#divheading{
+    
+    font-size:40px;
+    text-align:center;
+    color:#3b5998;
+    text-shadow:4px 5px 10px #3b5998;
+    padding-top:0px;
+    font-weight:100;
+}
+::-webkit-input-placeholder {
+   text-align: center;
+}
+<--hr{
+    margin: 20px 20px;
+    border-top:2px solid rgb(64,0,0) ;
+    border-bottom:2px solid rgb(64,0,00);
+    border-radius: 10px;
+    
+}-->
+
+input[type=text]{
+    width: 30%;
+    border:2px solid #696969;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color:;
+    padding: 9px 35px; 
+    margin:20px 0px;    
+}
+input[type=password]{
+    width: 30%;
+    border:2px solid #696969;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color:;
+    padding: 9px 35px; 
+    margin:20px 10px;    
+}
+input[type=submit] , input[type=reset]{
+    background-color:green;
+    border:1px solid green;
+    padding: 10px 28px;
+    text-decoration: none;
+    margin:5px 5px;
+    border-radius: 7px;
+    -webkit-transition: all 0.2s ease-in-out;
+    color:#ccffff;
+    font-size:15px; 
+    text-shadow:0px 0px 10px  #b3ffff;
+}
+
+input[type=submit]:hover , input[type=reset]:hover{
+    -webkit-transform: scale(1.06);
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #40ff00;
+}
+
+hr{
+    margin: 20px 20px;
+    border-top:2px solid #660033;
+    border-bottom:2px solid #660033;
+}
+.aname{
+    display: inline;
+   
+}
+.aname span{
+       padding-right: 30px;
+}
+
+</style>
+</head>
+<body>
+<p id="heading">DC Comics - Register </p>
+<div class = "textcon">
+<h2 class="info">All the fields below are neccesary , and please fill the details correctly :) .</h2>
+<br>
+</div>
+<div class = "div1"> 
+<h2 id="divheading">    Register  </h2>
+ <center>
+<form id="register_form" action="register.php" method="POST" >
+<hr>
+    <div class="row">
+    <div class="aname">
+        <span><input id="firstname" name="firstname" type="text" size="30"  placeholder="First Name"/ required></span>
+        <input id="lastname" name="lastname" type="text" size="30" placeholder="Last Name" required />
+        <br>
+    </div>
+        <input id="email" name="email" type="text" size="30" placeholder="Enter Email" required />
+        <br>
+        <input id="username" name="username" type="text" size="30"  placeholder="Username" required/>
+        <br>
+    <div class="aname">
+        <span><input id="passwordbox" name="pwd" type="password" size="20" placeholder="Password"/ required></span>
+        <input id="cpasswordbox" name="cpwd" type="password" size="20" placeholder="Confrim Password" onchange="pass(this)" required/>
+    </div>
+        <br />
+        <label><input id="check" name="show" type="checkbox" />Show Password(s)</label>
+    </div>
+    <br><br>
+    <input type="reset" onreset="res()" value="Clear fields" /> <input id="submit_button" type="submit" value="REGISTER NOW" />
+
+    <br><br>
+</form>     
+ 
+ <br></center> 
+</div>
+<br><br>
+<hr><br>
+<script>
+var r = 0;
+var subbtn = document.querySelector("#submit_button")
+var p = document.getElementById('passwordbox');
+function pass(x){
+    var cp = document.getElementById('cpasswordbox');
+    if(x.value==p.value){
+        r=1;
+        //subbtn.setAttribute("disabled" , "able");   
+    }
+    else{ 
+        x.value = '';
+        p.value = '';
+        alert("the passwords do not match . please rectify the mistake")
+        r=0;
+        //subbtn.setAttribute("disabled" , "disabled");   
+    }
+}
+
+
+var subm = document.getElementById("register_form")
+subm.onsubmit = sub;
+function sub()
+    {
+        var a = confirm("Would you like to Submit the form ?")
+        return a;
+    }
+
+function res()
+    {
+        var a = confirm("Would you like to Reset the form ?")
+        return a;
+    }
+
+function show(){
+    var cp = document.getElementById('cpasswordbox');
+    var p = document.getElementById('passwordbox');
+    p.setAttribute('type', 'text');
+    cp.setAttribute('type', 'text');
+}
+function hide() {
+    var cp = document.getElementById('cpasswordbox');
+    var p = document.getElementById('passwordbox');
+    p.setAttribute('type', 'password');
+    cp.setAttribute('type','password');
+}
+var pw = 0;
+document.getElementById("check").addEventListener("click",passcheck,false)
+function passcheck(){
+    if (pw == 0) {
+        pw = 1;
+        show();
+    }else {
+        pw = 0;
+        hide();
+    }
+}
+
+</script>
+<footer style="font-size:16px; color:white; opacity:0.8;"> All Site Content &#169 Copyright 2016 A.A.A</footer>
+</body>
+</html>
